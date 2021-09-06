@@ -1,14 +1,21 @@
 import 'package:chatapp/constants.dart';
+import 'package:chatapp/models/ChatMessage.dart';
 import 'package:chatapp/screens/messages/components/body.dart';
-// import 'package:chatapp/screens/chats/components/body.dart';
 import 'package:flutter/material.dart';
 
-class MessagesScreen extends StatelessWidget {
+class MessagesScreen extends StatelessWidget with ChangeNotifier {
+  
+  static ValueNotifier<int> length = ValueNotifier(myMsg.length);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body(),
+      body: ValueListenableBuilder(
+        valueListenable: length,
+        builder: (context, value, _) {
+          return Body();
+        },
+      ),
     );
   }
 
@@ -40,7 +47,9 @@ class MessagesScreen extends StatelessWidget {
       actions: [
         IconButton(icon: Icon(Icons.local_phone), onPressed: () {}),
         IconButton(icon: Icon(Icons.videocam), onPressed: () {}),
-        SizedBox(width: kDefaultPadding / 2,)
+        SizedBox(
+          width: kDefaultPadding / 2,
+        )
       ],
     );
   }

@@ -10,12 +10,12 @@ class Message {
   Message(
       {this.name,
       this.group,
-      this.text,
-      this.issender,
+      @required this.text,
+      @required this.issender,
       this.messageStatus,
       this.messageType});
 }
-
+var count = myMsg.length;
 List<Message> myMsg = [
   new Message(
     name: 'anees',

@@ -1,12 +1,27 @@
 import 'package:chatapp/constants.dart';
+import 'package:chatapp/models/ChatMessage.dart';
+import 'package:chatapp/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 
-class ChatInputField extends StatelessWidget {
+class ChatInputField extends StatefulWidget {
   ChatInputField({
     Key key,
   }) : super(key: key);
-  TextEditingController _controller;
-  String text;
+  @override
+  _ChatInputFieldState createState() => _ChatInputFieldState();
+}
+
+class _ChatInputFieldState extends State<ChatInputField> {
+  TextEditingController _controller = new TextEditingController();
+
+  addmsg(String text) {
+    myMsg.add(new Message(
+      name: 'ali',
+      issender: true,
+      group: '30-sep',
+      text: text,
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +45,7 @@ class ChatInputField extends StatelessWidget {
           SizedBox(width: kDefaultPadding),
           Expanded(
               child: Container(
-            padding:
-                EdgeInsets.symmetric(horizontal: kDefaultPadding * 0.75),
+            padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 0.75),
             decoration: BoxDecoration(
               color: kPrimaryColor.withOpacity(0.05),
               borderRadius: BorderRadius.circular(40),
@@ -49,7 +63,7 @@ class ChatInputField extends StatelessWidget {
                 SizedBox(width: kDefaultPadding / 4),
                 Expanded(
                   child: TextField(
-                    text = _controller.text,
+                    controller: _controller,
                     decoration: InputDecoration(
                       hintText: 'Type Message',
                       border: InputBorder.none,
@@ -65,13 +79,26 @@ class ChatInputField extends StatelessWidget {
                       .withOpacity(0.64),
                 ),
                 SizedBox(width: kDefaultPadding / 4),
-                Icon(
-                  Icons.camera_alt_outlined,
+                IconButton(
+                  splashColor: kPrimaryColor,
+                  // Icons.camera_alt_outlined,
+                  icon: Icon(Icons.send),
                   color: Theme.of(context)
                       .textTheme
                       .bodyText1
                       .color
                       .withOpacity(0.64),
+                  onPressed: () {
+                    print(_controller.text);
+                    print(MessagesScreen.length.value +=1);
+                    count++;
+                    setState(() {
+                      addmsg(_controller.text);
+                      _controller.text = '';
+                    });
+                    print(_controller.text);
+                    print(count);
+                  },
                 ),
               ],
             ),
