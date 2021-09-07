@@ -1,5 +1,4 @@
-import 'package:chatapp/theme.dart';
-import 'package:chatapp/screens/welcome/welcomeScreen.dart';
+import 'package:chatapp/HR_app/signup_screens/signin_scaffold.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: lightThemeData(context),
-      darkTheme: darkThemeData(context),
+      // theme: lightThemeData(context),
+      // darkTheme: darkThemeData(context),
       // themeMode: ThemeMode.system,
-      home: WelcomeScreen(),
+      theme: ThemeData(primaryColor: Colors.white),
+      home: Signin_scaffold(),
     );
   }
 }
