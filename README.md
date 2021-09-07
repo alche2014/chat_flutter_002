@@ -1,6 +1,6 @@
 # chat_flutter_002
 
-It is mobile application made on flutter for tourist to explore new pakistan 
+A new flutter application
 
 ## Getting Started
 
