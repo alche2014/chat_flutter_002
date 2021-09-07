@@ -24,12 +24,15 @@ class TeamHistory extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Align(
-            alignment: Alignment.centerRight,
-            child: TextButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.keyboard_arrow_down, color: Colors.black,),
-              label: Text('today'),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: TextButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.keyboard_arrow_down, color: Colors.black,),
+                label: Text('today', style: TextStyle(color: Colors.black),),
+              ),
             ),
           ),
           Expanded(

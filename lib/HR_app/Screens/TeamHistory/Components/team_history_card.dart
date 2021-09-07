@@ -7,7 +7,12 @@ class TeamHistoryCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       padding: EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      decoration: BoxDecoration(boxShadow: [BoxShadow(
+        color: Colors.grey,
+        blurRadius: 1,
+        // spreadRadius: 0,
+        // offset: Offset(0, 0)
+      )],
           borderRadius: BorderRadius.circular(10), color: Colors.white),
       child: Column(
         children: [
@@ -43,12 +48,10 @@ class TeamHistoryCard extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                child: Text(
-                  islate == true ? 
-                  'Late': 'On time'),
+                child: Text(islate == true ? 'Late' : 'On time'),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color:islate == true? Colors.red[50] : Colors.green[50]),
+                    color: islate == true ? Colors.red[50] : Colors.green[50]),
               )
             ],
           ),
