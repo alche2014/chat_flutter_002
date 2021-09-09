@@ -1,3 +1,6 @@
+import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dart';
+import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
+import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
 import 'package:chatapp/HR_app/Screens/TeamHistory/screen_team_history.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +14,9 @@ class _NavState extends State<Nav> {
 
   final tabs = [
     Center(child: TeamHistory()),
-    Center(child: Text('PerformanceTabbar')),
-    Center(child: Text('page23')),
-    Center(child: Text('page30')),
+    Center(child: Notifications()),
+    Center(child: Request()),
+    Center(child: CheckinHistory()),
   ];
   @override
   Widget build(BuildContext context) {
