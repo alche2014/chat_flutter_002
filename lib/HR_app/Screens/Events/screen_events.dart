@@ -9,7 +9,7 @@ class Events extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Checkin History',
+          'Events',
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

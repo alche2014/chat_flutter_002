@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class EventCard extends StatelessWidget {
   EventCard({this.text, this.date, this.image});
@@ -42,11 +43,12 @@ class EventCard extends StatelessWidget {
                           date.day.toString(),
                           style: TextStyle(fontSize: 38),
                         ),
-                        Text(date.month.toString(),
+                        Text(DateFormat.MMM().format(date).toString(),
                             style: TextStyle(
                                 color: Colors.red[800], fontSize: 15)),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -58,7 +60,7 @@ class EventCard extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 6),
-                        Text(date.toString(),//'16:04 20/10/2021',
+                        Text(date.toString(), //'16:04 20/10/2021',
                             style: TextStyle(color: Colors.grey)),
                       ],
                     ),
