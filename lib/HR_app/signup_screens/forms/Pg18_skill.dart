@@ -1,4 +1,5 @@
 import 'package:chatapp/HR_app/Screens/navigaton_bar.dart';
+import 'package:chatapp/HR_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class Skills_Pg18 extends StatefulWidget {
@@ -50,7 +51,10 @@ class _Skills_Pg18State extends State<Skills_Pg18> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+              color:MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -58,7 +62,10 @@ class _Skills_Pg18State extends State<Skills_Pg18> {
                 icon: const Icon(Icons.keyboard_arrow_down),
                 elevation: 0,
                 isExpanded: true,
-                dropdownColor: Colors.white,
+                // dropdownColor: MediaQuery.of(context).platformBrightness ==
+                //         Brightness.light
+                //     ? kPrimaryColor.withOpacity(0.7)
+                //     : kContentColorLightTheme.withOpacity(0.7),
                 hint: Text(
                   'Skills',
                   style: TextStyle(color: Colors.grey),
@@ -102,14 +109,14 @@ class _Skills_Pg18State extends State<Skills_Pg18> {
                 },
                 child: Text(
                   'Skip',
-                  style: TextStyle(color: Colors.red[800]),
+                  style: TextStyle(color: kSecondaryColor),
                 )),
           ),
           FractionallySizedBox(
             widthFactor: 1,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red[800],
+                  primary: kPrimaryColor,
                   padding: EdgeInsets.symmetric(
                     vertical: 15,
                   ),

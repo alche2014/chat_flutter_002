@@ -1,6 +1,7 @@
 import 'package:chatapp/HR_app/Screens/CheckinHistory/Components/checkin_history_card.dart';
 import 'package:chatapp/HR_app/Screens/CheckinHistory/Components/linear_bar.dart';
 import 'package:chatapp/HR_app/Screens/CheckinHistory/Components/models.dart';
+import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class CheckinHistory extends StatefulWidget {
@@ -13,21 +14,7 @@ class _CheckinHistoryState extends State<CheckinHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Checkin History',
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          IconButton(
-              icon: Icon(
-                Icons.notifications,
-              ),
-              onPressed: () {})
-        ],
-      ),
+      appBar: app_bar('Checkin History'),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(
@@ -70,7 +57,10 @@ class _CheckinHistoryState extends State<CheckinHistory> {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: mycheck.length,
                 itemBuilder: (_, index) {
-                  return mycheck[index];
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                    child: mycheck[index],
+                  );
                 },
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:chatapp/HR_app/Screens/navigaton_bar.dart';
+import 'package:chatapp/HR_app/constants.dart';
 import 'package:chatapp/HR_app/signup_screens/signin_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
               hintText: 'School',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -64,7 +68,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
               hintText: 'Degree',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor:MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -85,7 +92,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
               hintText: 'Field of study',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -111,7 +121,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -140,7 +153,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -169,7 +185,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
               hintText: 'Degree',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -190,7 +209,10 @@ class _Education_Pg6State extends State<Education_Pg6> {
             decoration: InputDecoration(
               hintText: 'Discription',
               filled: true,
-              fillColor: Colors.white,
+              fillColor:MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.transparent)),
@@ -210,14 +232,14 @@ class _Education_Pg6State extends State<Education_Pg6> {
             },
             child: Text(
               'Skip',
-              style: TextStyle(color: Colors.red[800]),
+              style: TextStyle(color: kSecondaryColor),
             ),
           ),
           FractionallySizedBox(
             widthFactor: 1,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.red[800],
+                primary: kPrimaryColor,
                 padding: EdgeInsets.symmetric(
                   vertical: 15,
                 ),

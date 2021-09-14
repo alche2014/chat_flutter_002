@@ -1,4 +1,6 @@
+import 'package:chatapp/HR_app/Screens/TeamHistory/Components/model.dart';
 import 'package:chatapp/HR_app/Screens/TeamHistory/Components/team_history_card.dart';
+import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class TeamHistory extends StatefulWidget {
@@ -11,23 +13,8 @@ class _TeamHistoryState extends State<TeamHistory> {
   String dropdownValue = 'Today';
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Team History',
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          IconButton(
-              icon: Icon(
-                Icons.notifications,
-              ),
-              onPressed: () {})
-        ],
-      ),
+      appBar: app_bar('Team History'),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -51,7 +38,8 @@ class _TeamHistoryState extends State<TeamHistory> {
                       // print(dropdownValue);
                     });
                   },
-                  items: ['Today', 'yesterday', 'this week', 'this month'].map<DropdownMenuItem<String>>((String value) {
+                  items: ['Today', 'yesterday', 'this week', 'this month']
+                      .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
@@ -71,9 +59,11 @@ class _TeamHistoryState extends State<TeamHistory> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 5,
+              itemCount: myTeamHistory.length,
               itemBuilder: (context, index) {
-                return TeamHistoryCard();
+                return Padding(padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                child: myTeamHistory[index],);
+                
               },
             ),
           ),

@@ -1,6 +1,4 @@
-import 'package:chatapp/HR_app/Screens/Events/Components/events_card.dart';
-import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/Components/events_card.dart';
 
 List myevents = [
   EventCard(

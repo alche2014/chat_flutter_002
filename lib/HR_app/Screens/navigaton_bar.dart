@@ -1,5 +1,7 @@
 import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dart';
-import 'package:chatapp/HR_app/Screens/Events/screen_events.dart';
+import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/screen_event_cards.dart';
+import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_joind_members.dart';
+import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
 import 'package:chatapp/HR_app/Screens/TeamHistory/screen_team_history.dart';
@@ -15,8 +17,8 @@ class _NavState extends State<Nav> {
 
   final tabs = [
     Center(child: TeamHistory()),
-    Center(child: Notifications()),
     Center(child: Events()),
+    Center(child: Request()),
     Center(child: CheckinHistory()),
   ];
   @override
@@ -26,7 +28,7 @@ class _NavState extends State<Nav> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentindex,
         type: BottomNavigationBarType.fixed,
-        fixedColor: Colors.red[800],
+        // fixedColor: Colors.red[800],
         items: [
           BottomNavigationBarItem(
             icon: Icon(

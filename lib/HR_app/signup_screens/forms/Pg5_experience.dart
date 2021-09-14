@@ -1,4 +1,5 @@
 import 'package:chatapp/HR_app/Screens/navigaton_bar.dart';
+import 'package:chatapp/HR_app/constants.dart';
 import 'package:chatapp/HR_app/signup_screens/signin_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               hintText: 'Title',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -65,7 +69,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+              color: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -73,7 +80,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                 icon: const Icon(Icons.keyboard_arrow_down),
                 elevation: 0,
                 isExpanded: true,
-                dropdownColor: Colors.white,
+                // dropdownColor: MediaQuery.of(context).platformBrightness ==
+                //         Brightness.light
+                //     ? kPrimaryColor.withOpacity(0.5)
+                    // : kContentColorLightTheme.withOpacity(0.5),
                 hint: Text(
                   'Employment Type',
                   style: TextStyle(color: Colors.grey),
@@ -105,7 +115,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               hintText: 'Company Name',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -126,7 +139,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               hintText: 'Location',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -149,7 +165,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color:MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -178,7 +197,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
+                      color: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -200,7 +222,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
             ],
           ),
           Theme(
-            data: ThemeData(unselectedWidgetColor: Colors.red[800]),
+            data: ThemeData(unselectedWidgetColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor
+                    : kContentColorLightTheme,),
             child: CheckboxListTile(
               contentPadding: EdgeInsets.only(left: 0),
               // contentPadding: null,
@@ -228,7 +253,10 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
             decoration: InputDecoration(
               hintText: 'Discription',
               filled: true,
-              fillColor: Colors.white,
+              fillColor: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kPrimaryColor.withOpacity(0.1)
+                    : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Colors.transparent)),
@@ -248,13 +276,13 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               },
               child: Text(
                 'Skip',
-                style: TextStyle(color: Colors.red[800]),
+                style: TextStyle(color: kSecondaryColor),
               )),
           FractionallySizedBox(
             widthFactor: 1,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red[800],
+                  primary: kPrimaryColor,
                   padding: EdgeInsets.symmetric(
                     vertical: 15,
                   ),

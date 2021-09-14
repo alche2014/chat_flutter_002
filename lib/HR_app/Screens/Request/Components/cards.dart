@@ -1,7 +1,7 @@
-import 'dart:ffi';
-
+import 'package:chatapp/HR_app/constants.dart';
 import 'package:flutter/material.dart';
 
+//-----------------Header tile-------------
 class HeaderTile extends StatelessWidget {
   HeaderTile(
       {this.image, this.text, this.buttontext, this.press, this.mycolor});
@@ -13,8 +13,9 @@ class HeaderTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+//......colored container.......
       leading: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: mycolor,
@@ -41,17 +42,23 @@ class HeaderTile extends StatelessWidget {
   }
 }
 
+//--------------------Pending Request card-----------------------
+
 class PR_Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
       child: Material(
-        color: Colors.white,
+        elevation: 3,
+        color: MediaQuery.of(context).platformBrightness ==
+                            Brightness.light
+                        ? Colors.white
+                        : kContentColorLightTheme.withOpacity(0.1),
         borderRadius: BorderRadius.circular(10),
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
-          onTap: (){},
+          onTap: () {},
           child: Container(
             // margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             padding: EdgeInsets.symmetric(vertical: 10),
@@ -88,6 +95,7 @@ class PR_Card extends StatelessWidget {
     );
   }
 }
+//-------------------red create Request------------------------
 
 class RedCreateButton extends StatelessWidget {
   @override

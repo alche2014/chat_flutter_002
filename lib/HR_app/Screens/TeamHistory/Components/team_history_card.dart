@@ -1,18 +1,23 @@
+import 'package:chatapp/HR_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class TeamHistoryCard extends StatelessWidget {
-  bool islate = false;
+  TeamHistoryCard({this.islate});
+  bool islate ;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 5),
       child: Material(
-        color: Colors.white,
+        color: MediaQuery.of(context).platformBrightness ==
+                        Brightness.light
+                    ? kContentColorDarkTheme
+                    : kContentColorLightTheme.withOpacity(0.1),
         borderRadius: BorderRadius.circular(10),
         elevation: 3,
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
-          hoverColor: Colors.red,
+          // hoverColor: Colors.red,
           // canRequestFocus: true,
           // splashColor: Colors.red,
           // highlightColor: Colors.red,
@@ -66,7 +71,7 @@ class TeamHistoryCard extends StatelessWidget {
                     ),
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                      child: Text(islate == true ? 'Late' : 'On time'),
+                      child: Text(islate == true ? 'Late' : 'On time', style: TextStyle(color: Colors.black),),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: islate == true ? Colors.red[50] : Colors.green[50]),

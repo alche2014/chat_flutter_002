@@ -1,27 +1,14 @@
 import 'package:chatapp/HR_app/Screens/Request/Components/cards.dart';
 import 'package:chatapp/HR_app/Screens/Request/Components/models.dart';
 import 'package:chatapp/HR_app/Screens/Request/Components/requests_card.dart';
+import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class Request extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Request',
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          IconButton(
-              icon: Icon(
-                Icons.notifications,
-              ),
-              onPressed: () {})
-        ],
-      ),
+      appBar: app_bar('Request'),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Padding(

@@ -4,48 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:intl/intl.dart';
 
-// class Notification extends StatelessWidget {
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//        appBar: AppBar(
-//         centerTitle: true,
-//         title: Text(
-//           'Notifications',
-//         ),
-//         backgroundColor: Colors.transparent,
-//         elevation: 0,
-//         actions: [
-//           IconButton(
-//               icon: Icon(
-//                 Icons.notifications,
-//               ),
-//               onPressed: () {})
-//         ],
-//       ),
-//       body: Container(),
-//     );
-//   }
-// }
 class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        // centerTitle: true,
         title: Text(
           'Notifications',
         ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        actions: [
-          IconButton(
-              icon: Icon(
-                Icons.notifications,
-              ),
-              onPressed: () {})
-        ],
+        // backgroundColor: Colors.transparent,
+        // elevation: 0,
+        // actions: [
+        //   IconButton(
+        //       icon: Icon(
+        //         Icons.notifications,
+        //       ),
+        //       onPressed: () {})
+        // ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -76,52 +52,13 @@ class Notifications extends StatelessWidget {
             ]),
           ),
           itemBuilder: (c, element) {
-            return Container(
-              // elevation: 8.0,
-              // margin:
-              //     EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-              child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: NotificationCard(
-                    model: element,
-                  )),
-            );
+            return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                child: NotificationCard(
+                  model: element,
+                ));
           },
         ),
-
-        // Column(
-        //   crossAxisAlignment: CrossAxisAlignment.start,
-        //   children: [
-        //     Text('New Notificaton', style: TextStyle(color: Colors.grey[500], fontWeight: FontWeight.bold),),
-        //     Expanded(
-        //       child: ListView.builder(
-        //         itemCount: notificationlist.length,
-        //         itemBuilder: (context, index){
-        //           return Column(
-        //             children: [
-        //               if(notificationlist[index].date == DateTime.september)
-        //                 NotificationCard(notificationlist[index]),
-        //             ],
-        //           );
-        //         }),
-        //     ),
-        //     Text('Earlier', style: TextStyle(color: Colors.grey[500], fontWeight: FontWeight.bold)),
-        //      Expanded(
-        //       child: ListView.builder(
-        //         itemCount: notificationlist.length,
-        //         itemBuilder: (context, index){
-        //           return Column(
-        //             children: [
-        //               if(notificationlist[index].date == DateTime.august)
-        //                 NotificationCard(notificationlist[index]),
-        //             ],
-        //           );
-        //         }),
-        //     ),
-        //     // NotificationCard(),
-        //     // NotificationCard(),
-        //   ],
-        // ),
       ),
     );
   }
