@@ -2,6 +2,7 @@ import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dar
 import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/screen_event_cards.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_joind_members.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
+import 'package:chatapp/HR_app/Screens/More/screen_more.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
 import 'package:chatapp/HR_app/Screens/TeamHistory/screen_team_history.dart';
@@ -16,7 +17,7 @@ class _NavState extends State<Nav> {
   int _currentindex = 0;
 
   final tabs = [
-    Center(child: TeamHistory()),
+    Center(child: More()),
     Center(child: Events()),
     Center(child: Request()),
     Center(child: CheckinHistory()),
