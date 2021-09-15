@@ -4,8 +4,8 @@ import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
 import 'package:chatapp/HR_app/Screens/More/screen_more.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
+import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
-import 'package:chatapp/HR_app/Screens/TeamHistory/screen_team_history.dart';
 import 'package:flutter/material.dart';
 
 class Nav extends StatefulWidget {
@@ -20,7 +20,7 @@ class _NavState extends State<Nav> {
     Center(child: More()),
     Center(child: Events()),
     Center(child: Request()),
-    Center(child: CheckinHistory()),
+    Center(child: Performance2()),
   ];
   @override
   Widget build(BuildContext context) {

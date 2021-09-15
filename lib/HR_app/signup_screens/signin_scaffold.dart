@@ -1,4 +1,4 @@
-import 'package:chatapp/HR_app/signup_screens/components/doted_stepbar.dart';
+import 'package:chatapp/HR_app/doted_stepbar.dart';
 import 'package:chatapp/HR_app/signup_screens/forms/Pg18_skill.dart';
 import 'package:chatapp/HR_app/signup_screens/forms/Pg4_personalinfo.dart';
 import 'package:chatapp/HR_app/signup_screens/forms/Pg5_experience.dart';

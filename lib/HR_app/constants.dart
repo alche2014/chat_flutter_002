@@ -10,13 +10,13 @@ const kErrorColor = Color(0xFFF03738);
 
 const kDefaultPadding = 20.0;
 
-setdata(String key, String value) async {
+Future setdata(String key, String value) async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
   preferences.setString(key, value);
 }
 
-getdata(String key) async {
+Future<String> getdata(String key) async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
-  String data = preferences.getString(key);
-  return data;
+  return preferences.getString(key) ?? "";
+  // return data;
 }

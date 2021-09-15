@@ -87,10 +87,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
               // fillColor: Colors.white,
-              fillColor: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              fillColor:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -123,10 +123,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               hintText: 'Father Name',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              fillColor:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -159,10 +159,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               hintText: 'Email',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              fillColor:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -199,10 +199,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               hintText: 'Phone',
               hintStyle: TextStyle(color: Colors.grey),
               filled: true,
-              fillColor: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              fillColor:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: Colors.transparent, width: 0),
@@ -234,10 +234,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              color:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -277,10 +277,10 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              color:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -319,10 +319,12 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             margin: EdgeInsets.symmetric(vertical: 10),
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),),
+              borderRadius: BorderRadius.circular(10),
+              color:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -353,25 +355,26 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           FractionallySizedBox(
             widthFactor: 1,
             child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: kPrimaryColor,
-                  padding: EdgeInsets.symmetric(
-                    vertical: 15,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+              style: ElevatedButton.styleFrom(
+                primary: kPrimaryColor,
+                padding: EdgeInsets.symmetric(
+                  vertical: 15,
                 ),
-                onPressed: () {
-                  setState(() {
-                    Signin_scaffold.counter.value += 1;
-                  });
-                },
-                child: Text(
-                  'Next',
-                  // style: TextStyle(color: Colors.white),
-                )),
-          )
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: () {
+                setState(() {
+                  Signin_scaffold.counter.value += 1;
+                });
+              },
+              child: Text(
+                'Next',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
         ],
       ),
     );
