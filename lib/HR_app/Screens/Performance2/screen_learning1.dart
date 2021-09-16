@@ -21,7 +21,7 @@ class Learning1 extends StatelessWidget {
           children: [
             // Spacer(),
 //-------------doted bar---------------
-            Doted_stepbar(2),
+            Doted_stepbar(1),
             Spacer(flex: 2),
             Text(
               'Learning',

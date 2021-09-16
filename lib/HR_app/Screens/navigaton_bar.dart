@@ -1,11 +1,19 @@
+import 'package:chatapp/HR_app/Screens/Announcemets/screen_announcement.dart';
+import 'package:chatapp/HR_app/Screens/Birthday/screen_birthday.dart';
 import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/screen_event_cards.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_joind_members.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
+import 'package:chatapp/HR_app/Screens/LeaveHistory/Components/leave_history_card.dart';
+import 'package:chatapp/HR_app/Screens/LeaveHistory/screen_leave_history.dart';
+import 'package:chatapp/HR_app/Screens/LeaveManagement/Components/Card.dart';
+import 'package:chatapp/HR_app/Screens/LeaveManagement/screen_leave_management.dart';
 import 'package:chatapp/HR_app/Screens/More/screen_more.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
 import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest1/screen_team_request.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest2/screen_team_request2.dart';
 import 'package:flutter/material.dart';
 
 class Nav extends StatefulWidget {
@@ -18,8 +26,8 @@ class _NavState extends State<Nav> {
 
   final tabs = [
     Center(child: More()),
-    Center(child: Events()),
-    Center(child: Request()),
+    Center(child: TeamRequest2()),
+    Center(child: LeaveManagement()),
     Center(child: Performance2()),
   ];
   @override

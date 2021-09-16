@@ -1,4 +1,5 @@
 import 'package:chatapp/HR_app/Theme.dart';
+import 'package:chatapp/HR_app/signup_screens/Pg1_Signin.dart';
 import 'package:chatapp/HR_app/signup_screens/signin_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(primaryColor: Colors.white),
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      home: Signin_scaffold(),
+      home: Signin_Pg1(),
     );
   }
 }

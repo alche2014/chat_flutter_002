@@ -11,7 +11,7 @@ class Events extends StatelessWidget {
         itemCount: myevents.length,
         itemBuilder: (_, index) {
           return Padding(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: myevents[index]);
         },
       ),

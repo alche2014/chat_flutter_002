@@ -14,7 +14,7 @@ class EventCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       elevation: 3,
       color: MediaQuery.of(context).platformBrightness == Brightness.light
-          ? kContentColorDarkTheme
+          ? Colors.white
           : kContentColorLightTheme.withOpacity(0.1),
       child: InkWell(
         borderRadius: BorderRadius.circular(10),
