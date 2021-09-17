@@ -1,5 +1,6 @@
 import 'package:chatapp/HR_app/Screens/navigaton_bar.dart';
 import 'package:chatapp/HR_app/constants.dart';
+import 'package:chatapp/HR_app/signup_screens/signin_scaffold.dart';
 import 'package:flutter/material.dart';
 
 class Skills_Pg18 extends StatefulWidget {
@@ -51,10 +52,10 @@ class _Skills_Pg18State extends State<Skills_Pg18> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color:MediaQuery.of(context).platformBrightness ==
-                        Brightness.light
-                    ? kPrimaryColor.withOpacity(0.1)
-                    : kContentColorLightTheme.withOpacity(0.1),
+              color:
+                  MediaQuery.of(context).platformBrightness == Brightness.light
+                      ? kPrimaryColor.withOpacity(0.1)
+                      : kContentColorLightTheme.withOpacity(0.1),
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
@@ -130,6 +131,7 @@ class _Skills_Pg18State extends State<Skills_Pg18> {
                   //        Signin_scaffold.counter.value += 1;
                   //     });
                   //   } else {
+                  Signin_scaffold.counter = ValueNotifier(0);
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Nav()));
                   //   }

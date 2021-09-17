@@ -6,7 +6,7 @@ import 'package:chatapp/HR_app/signup_screens/forms/Pg6_education.dart';
 import 'package:flutter/material.dart';
 
 class Signin_scaffold extends StatefulWidget {
-  static int count = 0;
+  // static int count = 0;
   static ValueNotifier<int> counter = ValueNotifier(0);
   @override
   _Signin_scaffoldState createState() => _Signin_scaffoldState();

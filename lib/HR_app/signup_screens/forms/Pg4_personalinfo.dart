@@ -10,6 +10,7 @@ class Personalinfo_Pg4 extends StatefulWidget {
 
 class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
   var dropdownValue;
+  var dropdownValue2;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -242,6 +243,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
                 value: dropdownValue,
+                style: TextStyle(color: Colors.black),
                 icon: const Icon(Icons.keyboard_arrow_down),
                 elevation: 0,
                 isExpanded: true,
@@ -254,9 +256,9 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   style: TextStyle(color: Colors.grey),
                 ),
                 onChanged: (String newValue) {
-                  //   setState(() {
-                  //     dropdownValue = newValue;
-                  //   });
+                  setState(() {
+                    dropdownValue = newValue;
+                  });
                 },
                 items: <String>['Male', 'Female', 'Other']
                     .map<DropdownMenuItem<String>>(
@@ -284,7 +286,8 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             ),
             child: DropdownButtonHideUnderline(
               child: DropdownButton<String>(
-                value: dropdownValue,
+                value: dropdownValue2,
+                style: TextStyle(color: Colors.black),
                 icon: const Icon(Icons.keyboard_arrow_down),
                 elevation: 0,
                 isExpanded: true,
@@ -297,9 +300,9 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   style: TextStyle(color: Colors.grey),
                 ),
                 onChanged: (String newValue) {
-                  //   setState(() {
-                  //     dropdownValue = newValue;
-                  //   });
+                  setState(() {
+                    dropdownValue2 = newValue;
+                  });
                 },
                 items:
                     <String>['Single', 'Married'].map<DropdownMenuItem<String>>(

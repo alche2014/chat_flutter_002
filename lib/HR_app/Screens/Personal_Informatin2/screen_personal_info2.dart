@@ -40,10 +40,14 @@ class _Personalinfo_Pg4State extends State<PersonalInformation2> {
 //-------------------------Profile pic------------------
                 Stack(
                   children: [
-                    ClipRRect(
-                      child: Image(
-                        image: AssetImage('assets/images/user_2.png'),
-                        width: 90,
+                    CircleAvatar(
+                      radius: 40,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Image(
+                          image: AssetImage('assets/images/user_2.png'),
+                          width: 90,
+                        ),
                       ),
                     ),
                     Positioned(

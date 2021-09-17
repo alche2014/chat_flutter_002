@@ -160,7 +160,7 @@ class Signin_Pg1 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/image/google-icon.jpg',
+                        'assets/images/google-icon.jpg',
                         width: 30,
                       ),
                       Text(

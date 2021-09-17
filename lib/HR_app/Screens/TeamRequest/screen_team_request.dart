@@ -1,4 +1,5 @@
-import 'package:chatapp/HR_app/Screens/TeamRequest1/Components/model.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest/Components/model.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest/Components/team_request1_card.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class TeamRequest extends StatelessWidget {
                   itemBuilder: (_, index) {
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: myTeamReq[index],
+                      child: TeamRequestCard(model:  myTeamReq[index]),
                     );
                   },
                 ),

@@ -12,8 +12,8 @@ import 'package:chatapp/HR_app/Screens/More/screen_more.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
 import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
-import 'package:chatapp/HR_app/Screens/TeamRequest1/screen_team_request.dart';
-import 'package:chatapp/HR_app/Screens/TeamRequest2/screen_team_request2.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest/screen_team_request.dart';
+import 'package:chatapp/HR_app/Screens/TeamRequest/screen_team_request2.dart';
 import 'package:flutter/material.dart';
 
 class Nav extends StatefulWidget {
@@ -26,7 +26,7 @@ class _NavState extends State<Nav> {
 
   final tabs = [
     Center(child: More()),
-    Center(child: TeamRequest2()),
+    Center(child: TeamRequest()),
     Center(child: LeaveManagement()),
     Center(child: Performance2()),
   ];

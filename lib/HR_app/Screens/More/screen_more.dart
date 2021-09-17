@@ -1,10 +1,12 @@
+import 'package:chatapp/HR_app/Screens/MembersDetail/screen_member_details.dart';
 import 'package:chatapp/HR_app/Screens/More/Componeents/more_card.dart';
 import 'package:chatapp/HR_app/Screens/MyProfile/screen_my_profile.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class More extends StatelessWidget {
-  var nav = new MyProfile();
+  var nav1 = new MyProfile();
+  var nav2 = new MemberDetails();
   // var nav2 = new Page31();
 
   String text1 = 'My Profile';
@@ -24,11 +26,11 @@ class More extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                child: MiniCardmore(text1, pic, nav),
+                child: MiniCardmore(text1, pic, nav1),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                child: MiniCardmore(text2, pic2, null),
+                child: MiniCardmore(text2, pic2, nav2),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
@@ -41,5 +43,3 @@ class More extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,3 +1,4 @@
+import 'package:chatapp/HR_app/Screens/Experience1/screen_experience1.dart';
 import 'package:chatapp/HR_app/Screens/MyProfile/Components/my_profile_card.dart';
 import 'package:chatapp/HR_app/Screens/MyProfile/Components/top_tile.dart';
 import 'package:chatapp/HR_app/Screens/Personal_Information1/screen_personal_info1.dart';
@@ -8,7 +9,7 @@ class MyProfile extends StatelessWidget {
   String text2 = 'Educatoin Information';
   String text3 = 'Experience Information';
   var next= new PersonalInformation1();
-  var next1; //= new Page35();
+  var next2 = new Experience1();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +38,7 @@ class MyProfile extends StatelessWidget {
                   children: [
                     MyProfileCard(text1, next),
                     MyProfileCard(text2, next),
-                    MyProfileCard(text3, next),
+                    MyProfileCard(text3, next2),
                   ],
                 ),
               )
