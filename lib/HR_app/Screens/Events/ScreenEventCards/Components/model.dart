@@ -3,11 +3,7 @@ import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/Components/events
 List myevents = [
   EventCard(
     text: 'This super leogue Lorem 2017',
-    date: DateTime(
-      2021,
-      05,
-      20,
-    ),
+    date: DateTime(2021, 05, 20),
     image: 'assets/images/event_pic.png',
   ),
   EventCard(

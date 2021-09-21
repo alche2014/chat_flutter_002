@@ -4,6 +4,7 @@ import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dar
 import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/screen_event_cards.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_joind_members.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
+import 'package:chatapp/HR_app/Screens/Home/screen_home.dart';
 import 'package:chatapp/HR_app/Screens/LeaveHistory/Components/leave_history_card.dart';
 import 'package:chatapp/HR_app/Screens/LeaveHistory/screen_leave_history.dart';
 import 'package:chatapp/HR_app/Screens/LeaveHistory2/screen_leave_history2.dart';
@@ -27,10 +28,10 @@ class _NavState extends State<Nav> {
   int _currentindex = 0;
 
   final tabs = [
-    Center(child: More()),
-    Center(child: TeamRequest()),
-    Center(child: LeaveManagement()),
+    Center(child: Pg19_HomePage()),
     Center(child: PerformanceTabBar()),
+    Center(child: Request()),
+    Center(child: More()),
   ];
   @override
   Widget build(BuildContext context) {

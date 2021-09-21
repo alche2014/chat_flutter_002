@@ -1,6 +1,6 @@
+import 'package:chatapp/HR_app/Screens/MyRequests/screen_my_request.dart';
 import 'package:chatapp/HR_app/Screens/Request/Components/cards.dart';
 import 'package:chatapp/HR_app/Screens/Request/Components/models.dart';
-import 'package:chatapp/HR_app/Screens/Request/Components/requests_card.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -28,9 +28,12 @@ class Request extends StatelessWidget {
                 text: 'My Request',
                 buttontext: 'View All',
                 mycolor: Colors.orangeAccent[700],
-                press: () {},
+                press: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => MyRequest()));
+                },
               ),
-              RedCreateButton(),
+              RedCreateButton1(),
               Flexible(
                 child: ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
