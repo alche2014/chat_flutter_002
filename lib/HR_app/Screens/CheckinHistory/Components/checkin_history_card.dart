@@ -19,7 +19,7 @@ class CheckinHistoryCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Material(
         color: MediaQuery.of(context).platformBrightness == Brightness.light
-            ? kContentColorDarkTheme
+            ? Colors.white
             : kContentColorLightTheme.withOpacity(0.1),
         borderRadius: BorderRadius.circular(10),
         elevation: 3,

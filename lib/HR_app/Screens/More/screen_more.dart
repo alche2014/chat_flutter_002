@@ -1,12 +1,13 @@
 import 'package:chatapp/HR_app/Screens/MembersDetail/screen_member_details.dart';
 import 'package:chatapp/HR_app/Screens/More/Componeents/more_card.dart';
 import 'package:chatapp/HR_app/Screens/MyProfile/screen_my_profile.dart';
+import 'package:chatapp/HR_app/Screens/Team/screen_team.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class More extends StatelessWidget {
   var nav1 = new MyProfile();
-  var nav2 = new MemberDetails();
+  var nav2 = new Team();
   // var nav2 = new Page31();
 
   String text1 = 'My Profile';

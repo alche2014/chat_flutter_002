@@ -1,12 +1,16 @@
+import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dart';
+import 'package:chatapp/HR_app/Screens/LeaveHistory2/screen_leave_history2.dart';
 import 'package:chatapp/HR_app/Screens/MembersDetail/Components/MemberDetails_card.dart';
-import 'package:chatapp/HR_app/Screens/More/Componeents/more_card.dart';
-import 'package:chatapp/HR_app/Screens/MyProfile/screen_my_profile.dart';
+import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
+import 'package:chatapp/HR_app/Screens/Personal_Information1/screen_personal_info1.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class MemberDetails extends StatelessWidget {
-  // var nav = new MyProfile();
-  // var nav2 = new Page31();
+  var nav1 = new PersonalInformation1();
+  var nav2 = new CheckinHistory();
+  var nav3 = new Performance2();
+  var nav4 = new LeaveHistory2();
 
   String text1 = 'Member Name';
   String text2 = 'Checkin History';
@@ -24,10 +28,10 @@ class MemberDetails extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Column(
             children: [
-              CardMemberDetails(text1, pic, null),
-              CardMemberDetails(text2, pic2, null),
-              CardMemberDetails(text3, pic2, null),
-              CardMemberDetails(text4, pic2, null),
+              CardMemberDetails(text1, pic, nav1),
+              CardMemberDetails(text2, pic2, nav2),
+              CardMemberDetails(text3, pic2, nav3),
+              CardMemberDetails(text4, pic2, nav4),
             ],
           ),
         ),
@@ -35,5 +39,3 @@ class MemberDetails extends StatelessWidget {
     );
   }
 }
-
-

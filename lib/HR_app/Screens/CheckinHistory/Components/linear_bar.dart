@@ -15,7 +15,7 @@ class LinearBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         color: MediaQuery.of(context).platformBrightness ==
                             Brightness.light
-                        ? kContentColorDarkTheme
+                        ? Colors.white
                         : kContentColorLightTheme.withOpacity(0.1),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),

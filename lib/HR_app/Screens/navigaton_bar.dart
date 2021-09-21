@@ -6,10 +6,12 @@ import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/JoindMembers/screen_
 import 'package:chatapp/HR_app/Screens/Events/ScreenEvents2/screen_events2.dart';
 import 'package:chatapp/HR_app/Screens/LeaveHistory/Components/leave_history_card.dart';
 import 'package:chatapp/HR_app/Screens/LeaveHistory/screen_leave_history.dart';
+import 'package:chatapp/HR_app/Screens/LeaveHistory2/screen_leave_history2.dart';
 import 'package:chatapp/HR_app/Screens/LeaveManagement/Components/Card.dart';
 import 'package:chatapp/HR_app/Screens/LeaveManagement/screen_leave_management.dart';
 import 'package:chatapp/HR_app/Screens/More/screen_more.dart';
 import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
+import 'package:chatapp/HR_app/Screens/Performance1/performance_tabbar.dart';
 import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
 import 'package:chatapp/HR_app/Screens/Request/screen_request.dart';
 import 'package:chatapp/HR_app/Screens/TeamRequest/screen_team_request.dart';
@@ -28,7 +30,7 @@ class _NavState extends State<Nav> {
     Center(child: More()),
     Center(child: TeamRequest()),
     Center(child: LeaveManagement()),
-    Center(child: Performance2()),
+    Center(child: PerformanceTabBar()),
   ];
   @override
   Widget build(BuildContext context) {

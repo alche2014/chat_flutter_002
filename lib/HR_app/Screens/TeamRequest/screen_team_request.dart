@@ -11,20 +11,23 @@ class TeamRequest extends StatelessWidget {
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              InkWell(
-                onTap: () {},
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text('Filter',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    SizedBox(width: 2),
-                    Icon(Icons.tune),
-                  ],
+              Align(
+                alignment: Alignment.centerRight,
+                child: InkWell(
+                  onTap: () {},
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('Filter',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      SizedBox(width: 2),
+                      Icon(Icons.tune),
+                    ],
+                  ),
                 ),
               ),
               Flexible(
@@ -33,10 +36,7 @@ class TeamRequest extends StatelessWidget {
                   itemCount: myTeamReq.length,
                   shrinkWrap: true,
                   itemBuilder: (_, index) {
-                    return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: TeamRequestCard(model:  myTeamReq[index]),
-                    );
+                    return TeamRequestCard(model:  myTeamReq[index]);
                   },
                 ),
               ),
