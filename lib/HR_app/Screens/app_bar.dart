@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 
 class app_bar extends StatelessWidget implements PreferredSizeWidget {
   final String titilee;
-  app_bar(this.titilee);
+  bool leading;
+  app_bar({this.titilee, this.leading});
 
   @override
   Size get preferredSize => Size.fromHeight(60.0);
@@ -15,6 +16,7 @@ class app_bar extends StatelessWidget implements PreferredSizeWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(titilee),
+        automaticallyImplyLeading: leading ?? true,
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -22,8 +24,8 @@ class app_bar extends StatelessWidget implements PreferredSizeWidget {
               // color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Notifications()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Notifications()));
             },
           )
         ],

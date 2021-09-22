@@ -8,7 +8,7 @@ class Request extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Request'),
+      appBar: app_bar(titilee: 'Request', leading: false,),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Padding(

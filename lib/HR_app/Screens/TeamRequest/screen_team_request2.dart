@@ -11,7 +11,7 @@ class TeamRequest2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Team Request'),
+      appBar: app_bar(titilee: 'Team Request'),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Padding(

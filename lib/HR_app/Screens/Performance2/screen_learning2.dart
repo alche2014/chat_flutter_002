@@ -1,4 +1,5 @@
 import 'package:chatapp/HR_app/RaitingBar.dart';
+import 'package:chatapp/HR_app/Screens/Performance2/screen_performance2.dart';
 import 'package:chatapp/HR_app/Screens/app_bar.dart';
 import 'package:chatapp/HR_app/constants.dart';
 import 'package:chatapp/HR_app/doted_stepbar.dart';
@@ -13,7 +14,7 @@ class Learning2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Performance'),
+      appBar: app_bar(titilee: 'Performance'),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -30,7 +31,8 @@ class Learning2 extends StatelessWidget {
             SizedBox(height: 10),
             RaitingBar(orange, 'On Job Learing', orange),
             RaitingBar(green, 'Functional', green),
-            RaitingBar(white, 'Softskills', red),
+            RaitingBar(
+                Theme.of(context).scaffoldBackgroundColor, 'Softskills', red),
             Spacer(flex: 8),
 //------------button----------------
             FractionallySizedBox(
@@ -46,8 +48,8 @@ class Learning2 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Learning1()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => Performance2()));
                 },
                 child: Text(
                   'View Details',

@@ -23,7 +23,7 @@ class Performance2Card extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           onTap: (){
               Navigator.of(context).
-              push(MaterialPageRoute(builder: (contex) => Performance3())
+              pushReplacement(MaterialPageRoute(builder: (contex) => Performance3())
               );
           },
           child: Container(

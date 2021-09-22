@@ -21,6 +21,7 @@ class _PerformanceTabBarState extends State<PerformanceTabBar>
     return Scaffold(
       appBar: AppBar(
         title: Text('Performance'),
+        automaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(
             icon: Icon(

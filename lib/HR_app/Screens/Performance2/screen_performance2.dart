@@ -12,7 +12,7 @@ class Performance2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Performance'),
+      appBar: app_bar(titilee: 'Performance'),
       body: Column(
         children: [
           Performance2Card(text1, subtitle),

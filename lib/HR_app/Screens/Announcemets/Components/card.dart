@@ -1,12 +1,15 @@
+import 'package:chatapp/HR_app/Screens/Announcemets/Components/model.dart';
 import 'package:chatapp/HR_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class AnnouncementCard extends StatelessWidget {
-  AnnouncementCard({this.text1, this.text2, this.date});
-  String text1;
-  String text2;
-  DateTime date;
+  AnnouncementCard({this.model, this.fulltext});
+  MyAnnouncement model;
+  // String text1;
+  // String text2;
+  bool fulltext;
+  // DateTime date;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,7 +33,7 @@ class AnnouncementCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                text1,
+                model.text1,
                 style: TextStyle(
                   color: Colors.red[800],
                   fontWeight: FontWeight.bold,
@@ -41,9 +44,10 @@ class AnnouncementCard extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
+
                     Text(
-                      text2,
-                      // maxLines: 5,
+                      model.text2,
+                      maxLines: fulltext == false ? 4: null,
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -56,7 +60,7 @@ class AnnouncementCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    DateFormat.jm().add_yMd().format(date).toString(),
+                    DateFormat.jm().add_yMd().format(model.date).toString(),
                     // date.toString(),
                     style: TextStyle(
                       fontSize: 10,

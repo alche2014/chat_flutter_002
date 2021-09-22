@@ -23,7 +23,7 @@ class MemberDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Members Details'),
+      appBar: app_bar(titilee: 'Members Details'),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),

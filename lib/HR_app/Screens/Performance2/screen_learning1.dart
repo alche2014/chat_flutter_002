@@ -14,7 +14,7 @@ class Learning1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Performance'),
+      appBar: app_bar(titilee: 'Performance'),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -47,7 +47,7 @@ class Learning1 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => Learning2()));
                 },
                 child: Text(

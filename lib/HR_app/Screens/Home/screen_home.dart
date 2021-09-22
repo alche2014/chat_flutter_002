@@ -1,12 +1,15 @@
+import 'package:chatapp/HR_app/Screens/Announcemets/Components/card.dart';
 import 'package:chatapp/HR_app/Screens/Announcemets/Components/model.dart';
 import 'package:chatapp/HR_app/Screens/Announcemets/screen_announcement.dart';
 import 'package:chatapp/HR_app/Screens/Birthday/Components/model.dart';
 import 'package:chatapp/HR_app/Screens/Birthday/screen_birthday.dart';
 import 'package:chatapp/HR_app/Screens/CheckinHistory/Components/linear_bar.dart';
+import 'package:chatapp/HR_app/Screens/CheckinHistory/screen_checkin_history.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/Components/model.dart';
 import 'package:chatapp/HR_app/Screens/Events/ScreenEventCards/screen_event_cards.dart';
 import 'package:chatapp/HR_app/Screens/Home/Components/Leave_Holiday_card.dart';
 import 'package:chatapp/HR_app/Screens/LeaveManagement/screen_leave_management.dart';
+import 'package:chatapp/HR_app/Screens/Notification/screen_notification.dart';
 import 'package:chatapp/HR_app/Screens/TeamHistory/screen_team_history.dart';
 import 'package:chatapp/HR_app/constants.dart';
 import 'package:flutter/material.dart';
@@ -55,9 +58,15 @@ class Pg19_HomePage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Icon(
-                                Icons.notifications,
-                                color: Colors.white,
+                              IconButton(
+                                icon: Icon(
+                                  Icons.notifications,
+                                  color: Colors.white,
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Notifications()));
+                                },
                               ),
                             ],
                           ),
@@ -159,9 +168,10 @@ class Pg19_HomePage extends StatelessWidget {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    // Navigator.of(context).push(
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) => Page3()));
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                CheckinHistory()));
                                   },
                                   child: Text(
                                     'View History',
@@ -235,7 +245,7 @@ class Pg19_HomePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: myAnnouncement[index],
+                    child: AnnouncementCard(model: myAnnouncement[index],fulltext: false,)//myAnnouncement[index],
                   );
                 } //=> myAnnouncement[index],
                 ),

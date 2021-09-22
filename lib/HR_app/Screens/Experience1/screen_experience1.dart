@@ -16,7 +16,7 @@ class _Experience1State extends State<Experience1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Experience'),
+      appBar: app_bar(titilee: 'Experience'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),

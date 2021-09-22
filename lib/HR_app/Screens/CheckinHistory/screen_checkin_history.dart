@@ -14,7 +14,7 @@ class _CheckinHistoryState extends State<CheckinHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Checkin History'),
+      appBar: app_bar(titilee: 'Checkin History'),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(

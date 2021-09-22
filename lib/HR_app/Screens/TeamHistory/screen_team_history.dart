@@ -14,7 +14,7 @@ class _TeamHistoryState extends State<TeamHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Team History'),
+      appBar: app_bar(titilee: 'Team History'),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,

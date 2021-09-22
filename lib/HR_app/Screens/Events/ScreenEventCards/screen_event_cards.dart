@@ -6,7 +6,7 @@ class Events extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Events'),
+      appBar: app_bar(titilee: 'Events'),
       body: ListView.builder(
         itemCount: myevents.length,
         itemBuilder: (_, index) {

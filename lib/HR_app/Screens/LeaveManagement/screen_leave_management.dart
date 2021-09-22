@@ -11,7 +11,7 @@ class LeaveManagement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Leave Management'),
+      appBar: app_bar(titilee: 'Leave Management'),
       body: SingleChildScrollView(
         // ---------------Main body Display------------------------------
         child: Container(

@@ -6,7 +6,7 @@ class LeaveHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Leave History'),
+      appBar: app_bar(titilee: 'Leave History'),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Padding(

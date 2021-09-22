@@ -6,7 +6,7 @@ class Birthday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar('Birthday'),
+      appBar: app_bar(titilee: 'Birthday'),
       body: Container(
         child: ListView.builder(
           itemCount: myBirthday.length,
